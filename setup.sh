@@ -12,4 +12,11 @@ clear
 
 pip install -r requirements.txt
 
+MODELS_DIRECTORY=models
+
+if [ ! -d "$MODELS_DIRECTORY" ]; then
+  # Control will enter here if $MODELS_DIRECTORY doesn't exist.
+  mkdir $MODELS_DIRECTORY
+fi
+
 echo "done!"
